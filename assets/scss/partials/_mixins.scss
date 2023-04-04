@@ -1,0 +1,46 @@
+@use "./variables";
+
+@mixin background-cover($axeX:center, $axeY:center){
+    background-position: $axeX $axeY;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin flex($direction:row, $wrap:wrap, $justify:center, $align:center){
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+// ************************ MEDIA QUERIES ************************ 
+
+// Small devices : 576px
+@mixin sm {
+    @media (min-width: #{variables.$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices : 768px
+ @mixin md {
+    @media (min-width: #{variables.$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ // Large devices : 992px
+ @mixin lg {
+    @media (min-width: #{variables.$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices : 1200px
+ @mixin xl {
+    @media (min-width: #{variables.$screen-xl-min}) {
+        @content;
+    }
+ }

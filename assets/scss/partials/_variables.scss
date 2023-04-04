@@ -1,0 +1,50 @@
+// ************************ COLORS ************************ 
+
+$white: #FFF;
+
+$text-h: #24303E;
+$text-h-var-darkgreen: #052C3B;
+$text-h-var-gray: #A7AAAD;
+
+$text-p: #808397;
+$text-p-var-blue: #19536C;
+$text-p-var-darkgray : #5B636D;
+
+$text-and-h-var-lightgreen: #24554A;
+
+$underline-yellow: #FAD400;
+$underline-pink: #FE7766;
+
+$foot-h : #2C7566;
+$foot-a : #458D7E;
+$foot-logos: #2C7566;
+
+// ************************ FONTS ************************ 
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
+$fraunces: 'Fraunces', serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+$barlow: 'Barlow', sans-serif;
+
+
+// ************************ BACKGROUNDS-IMG ************************ 
+
+$bg-brand:url(../../../images/mobile/image-transform.jpg);
+$bg-audience: url(../../../images/mobile/image-stand-out.jpg);
+$bg-graphic: url(../../../images/mobile/image-graphic-design.jpg);
+$bg-photography: url(../../../images/mobile/image-photography.jpg);
+
+// ************************ SCREENS ************************ 
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;

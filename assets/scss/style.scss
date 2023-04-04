@@ -1,0 +1,116 @@
+@use "../../node_modules/normalize.scss/normalize.scss";
+@use "../scss/partials/variables";
+@use "../scss/partials/mixins";
+
+
+
+
+// ************************ MOBILE FIRST ! ************************
+h1, h2, h3, h4, h5, h6, a{
+    font-family: variables.$fraunces;
+    margin: 0;
+}
+p{
+    font-family: variables.$barlow;
+    margin: 0;
+    color: variables.$text-p;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.128571px;
+}
+
+/* --- HEADER --- */
+header{
+    background-image: url(/images/mobile/image-header.jpg);
+    @include mixins.background-cover(bottom, center);
+    min-height: 538px;
+    padding: 32px 24px; // border content header
+    box-sizing: border-box;
+    h1, li, a{
+        color: variables.$white;
+    }
+    h1{
+        text-align: center;
+        font-size: 36px;
+        letter-spacing: 4px;
+        padding-left: 4px;
+        line-height: 49px;
+        font-weight: 900;
+        margin-top: 115px;
+        text-transform: uppercase;
+    }
+    .header__arrow-down{
+        width: 30px;
+        height: auto;
+        position: relative;
+        left: 50%;
+        margin-left: -15px; // element centered (width/2)
+        margin-top: 20px;
+    }
+    nav{
+        @include mixins.flex(row,wrap,space-between);
+        height: 24px;
+        .nav__menu{
+            display:none;
+        }
+        .nav__hamburger{
+            width: 24px;
+            height: 24px;
+            .nav__hamburger__element{
+                border-top: 2px solid variables.$white;
+                margin-bottom: 6px;
+            }
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            li{
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* --- MAIN --- */
+main{
+    & article{
+        text-align: center;
+        //@include mixins.flex(column,wrap,center,end);
+        .section--img{
+            @include mixins.background-cover(bottom center);    
+        }
+        .article--img{
+            height: 100%;
+        }
+        .section--img{
+            height: 312px;
+        }
+        .section--text{
+
+        }
+
+        // BRAND & AUDIENCE
+        .brand__img{
+            background-image: variables.$bg-brand;
+        }
+        .audience__img{
+            background-image: variables.$bg-audience;
+        }
+
+        // GRAPHIC DESIGN & PHOTOGRAPHY
+        .graphic__section, .photography__section{
+            height: 600px;
+        }
+        .graphic__section{
+            background-image: variables.$bg-graphic;
+        }
+        .photography__section{
+            background-image: variables.$bg-photography;
+        }
+    }
+}
+
+/* --- FOOTER --- */

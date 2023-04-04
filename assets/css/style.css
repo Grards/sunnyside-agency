@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -375,4 +377,110 @@ table {
 td,
 th {
   padding: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: "Fraunces", serif;
+  margin: 0;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+  margin: 0;
+  color: #808397;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.128571px;
+}
+
+/* --- HEADER --- */
+header {
+  background-image: url(/images/mobile/image-header.jpg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 538px;
+  padding: 32px 24px;
+  box-sizing: border-box;
+}
+header h1, header li, header a {
+  color: #FFF;
+}
+header h1 {
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 4px;
+  padding-left: 4px;
+  line-height: 49px;
+  font-weight: 900;
+  margin-top: 115px;
+  text-transform: uppercase;
+}
+header .header__arrow-down {
+  width: 30px;
+  height: auto;
+  position: relative;
+  left: 50%;
+  margin-left: -15px;
+  margin-top: 20px;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 24px;
+}
+header nav .nav__menu {
+  display: none;
+}
+header nav .nav__hamburger {
+  width: 24px;
+  height: 24px;
+}
+header nav .nav__hamburger .nav__hamburger__element {
+  border-top: 2px solid #FFF;
+  margin-bottom: 6px;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+}
+header nav ul li a {
+  text-decoration: none;
+}
+
+/* --- MAIN --- */
+main article {
+  text-align: center;
+}
+main article .section--img {
+  background-position: bottom center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main article .article--img {
+  height: 100%;
+}
+main article .section--img {
+  height: 312px;
+}
+main article .brand__img {
+  background-image: url(../../../images/mobile/image-transform.jpg);
+}
+main article .audience__img {
+  background-image: url(../../../images/mobile/image-stand-out.jpg);
+}
+main article .graphic__section, main article .photography__section {
+  height: 600px;
+}
+main article .graphic__section {
+  background-image: url(../../../images/mobile/image-graphic-design.jpg);
+}
+main article .photography__section {
+  background-image: url(../../../images/mobile/image-photography.jpg);
+}
+
+/* --- FOOTER --- *//*# sourceMappingURL=style.css.map */
