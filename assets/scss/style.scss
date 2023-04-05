@@ -4,20 +4,30 @@
 
 
 
-
 // ************************ MOBILE FIRST ! ************************
 h1, h2, h3, h4, h5, h6, a{
     font-family: variables.$fraunces;
+    color: variables.$text-h;
     margin: 0;
 }
 p{
     font-family: variables.$barlow;
-    margin: 0;
     color: variables.$text-p;
     font-style: normal;
     font-size: 18px;
     line-height: 30px;
     letter-spacing: -0.128571px;
+}
+a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+ul{
+    list-style: none;
+    margin: 0;
 }
 
 /* --- HEADER --- */
@@ -27,9 +37,12 @@ header{
     min-height: 538px;
     padding: 32px 24px; // border content header
     box-sizing: border-box;
+
     h1, li, a{
         color: variables.$white;
+        margin: 0;
     }
+
     h1{
         text-align: center;
         font-size: 36px;
@@ -40,6 +53,7 @@ header{
         margin-top: 115px;
         text-transform: uppercase;
     }
+
     .header__arrow-down{
         width: 30px;
         height: auto;
@@ -48,12 +62,15 @@ header{
         margin-left: -15px; // element centered (width/2)
         margin-top: 20px;
     }
+
     nav{
         @include mixins.flex(row,wrap,space-between);
         height: 24px;
+
         .nav__menu{
             display:none;
         }
+
         .nav__hamburger{
             width: 24px;
             height: 24px;
@@ -62,14 +79,9 @@ header{
                 margin-bottom: 6px;
             }
         }
-        ul{
-            list-style: none;
-            margin: 0;
-            li{
-                a{
-                    text-decoration: none;
-                }
-            }
+
+        a{
+            text-decoration: none;
         }
     }
 }
@@ -78,7 +90,6 @@ header{
 main{
     & article{
         text-align: center;
-        //@include mixins.flex(column,wrap,center,end);
         .section--img{
             @include mixins.background-cover(bottom center);    
         }
@@ -88,21 +99,34 @@ main{
         .section--img{
             height: 312px;
         }
-        .section--text{
-
-        }
 
         // BRAND & AUDIENCE
+        h2{
+            font-size: 32px;
+            letter-spacing: -0.23px;
+            line-height: 39.46px;
+            font-weight: 900;
+            margin: 0 0 24px;
+        }
+
+        p{
+            margin: 0 0 24px;
+        }
+
         .brand__img{
             background-image: variables.$bg-brand;
         }
         .audience__img{
             background-image: variables.$bg-audience;
         }
+        .section--text{
+            padding: 50px 24px;
+        }
 
         // GRAPHIC DESIGN & PHOTOGRAPHY
         .graphic__section, .photography__section{
             height: 600px;
+            @include mixins.flex(column,nowrap,end,center);
         }
         .graphic__section{
             background-image: variables.$bg-graphic;
@@ -110,7 +134,87 @@ main{
         .photography__section{
             background-image: variables.$bg-photography;
         }
+        h2{
+            color: variables.$text-and-h-var-lightgreen;
+            font-size: 28px;
+            line-height: 35px;
+            letter-spacing: -0.2px;
+            font-weight: 900;
+            margin: 0 24px 27px;
+        }
+        .graphic__text, .photography__text{
+            color: variables.$text-and-h-var-lightgreen;
+            font-size: 16px;
+            line-height: 27px;
+            letter-spacing: -0.11px;
+            font-weight: 600;
+            margin: 0 24px 59px;
+        }
+
+        // CLIENT TESTIMONIALS
+        .testimonials__title{
+            margin-top: 50px;
+            color: variables.$text-h-var-gray;
+            font-size: 16px;
+            line-height: 19.73px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        .testimonials__section{
+            padding: 0 24px;
+            .testmonials__picture{
+                height: 72px;
+                width: 72px;
+                border-radius: 50%;
+                margin-top: 64px;
+            }
+            .testimonials__text{
+                font-size: 18px;
+                line-height: 32px;
+                letter-spacing: -0.13px;
+                font-weight: 600;
+                color: variables.$text-p-var-darkgray;
+                margin: 32px 0;
+            }
+            .testimonials__name{
+                margin-bottom: 9px;
+                font-size: 18px;
+                line-height: 22.19px;
+                letter-spacing: -0.13px;
+                color: variables.$text-h;
+            }
+            .testimonials__job{
+                margin: 0;
+                font-size: 14px;
+                line-height: 25px;
+                letter-spacing: -0.1px;
+                color: variables.$text-h-var-gray;
+            }
+        }
+        .testimonials__section:last-child{
+            margin-bottom: 50px;
+        }
+
+        // PICTURES SQUARE
+        #orange{
+            background-image: url(../../images/mobile/image-gallery-orange.jpg);
+        }
+        #cone{
+            background-image: url(../../images/mobile/image-gallery-cone.jpg);
+        }
+        #milk{
+            background-image: url(../../images/mobile/image-gallery-milkbottles.jpg);
+        }
+        #sugar{
+            background-image: url(../../images/mobile/image-gallery-sugar-cubes.jpg);
+        }
+    }
+    .square{
+        @include mixins.flex(row,wrap,start,start);
     }
 }
 
 /* --- FOOTER --- */
+footer{
+    background-color: variables.$foot-background;
+}
