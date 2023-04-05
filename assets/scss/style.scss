@@ -117,7 +117,7 @@ main{
             background-image: url(../../images/mobile/image-transform.jpg);
         }
         .audience__img{
-            background-image: url(../../../images/mobile/image-stand-out.jpg);
+            background-image: url(../../images/mobile/image-stand-out.jpg);
         }
         .section--text{
             padding: 50px 24px;
@@ -166,10 +166,10 @@ main{
             @include mixins.flex(column,nowrap,flex-end,center);
         }
         .graphic__section{
-            background-image: url(../../../images/mobile/image-graphic-design.jpg);
+            background-image: url(../../images/mobile/image-graphic-design.jpg);
         }
         .photography__section{
-            background-image: url(../../../images/mobile/image-photography.jpg);
+            background-image: url(../../images/mobile/image-photography.jpg);
         }
         h2{
             color: variables.$text-and-h-var-lightgreen;

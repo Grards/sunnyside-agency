@@ -491,7 +491,7 @@ main article .brand__img {
   background-image: url(../../images/mobile/image-transform.jpg);
 }
 main article .audience__img {
-  background-image: url(../../../images/mobile/image-stand-out.jpg);
+  background-image: url(../../images/mobile/image-stand-out.jpg);
 }
 main article .section--text {
   padding: 50px 24px;
@@ -538,10 +538,10 @@ main article .graphic__section, main article .photography__section {
   align-items: center;
 }
 main article .graphic__section {
-  background-image: url(../../../images/mobile/image-graphic-design.jpg);
+  background-image: url(../../images/mobile/image-graphic-design.jpg);
 }
 main article .photography__section {
-  background-image: url(../../../images/mobile/image-photography.jpg);
+  background-image: url(../../images/mobile/image-photography.jpg);
 }
 main article h2 {
   color: #24554A;
