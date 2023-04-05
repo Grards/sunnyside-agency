@@ -6,12 +6,12 @@
 
 // ************************ MOBILE FIRST ! ************************
 h1, h2, h3, h4, h5, h6, a{
-    font-family: variables.$fraunces;
+    font-family: variables.$titles;
     color: variables.$text-h;
     margin: 0;
 }
 p{
-    font-family: variables.$barlow;
+    font-family: variables.$text;
     color: variables.$text-p;
     font-style: normal;
     font-size: 18px;
@@ -32,7 +32,7 @@ ul{
 
 /* --- HEADER --- */
 header{
-    background-image: url(/images/mobile/image-header.jpg);
+    background-image: url(../../images/mobile/image-header.jpg);
     @include mixins.background-cover(bottom, center);
     min-height: 538px;
     padding: 32px 24px; // border content header
@@ -114,10 +114,10 @@ main{
         }
 
         .brand__img{
-            background-image: variables.$bg-brand;
+            background-image: url(../../images/mobile/image-transform.jpg);
         }
         .audience__img{
-            background-image: variables.$bg-audience;
+            background-image: url(../../../images/mobile/image-stand-out.jpg);
         }
         .section--text{
             padding: 50px 24px;
@@ -166,10 +166,10 @@ main{
             @include mixins.flex(column,nowrap,flex-end,center);
         }
         .graphic__section{
-            background-image: variables.$bg-graphic;
+            background-image: url(../../../images/mobile/image-graphic-design.jpg);
         }
         .photography__section{
-            background-image: variables.$bg-photography;
+            background-image: url(../../../images/mobile/image-photography.jpg);
         }
         h2{
             color: variables.$text-and-h-var-lightgreen;
@@ -278,7 +278,7 @@ footer{
             @include mixins.flex(row,nowrap,center,center);
             margin: 0 28.5px;
             .footer__links__list__link{
-                font-family: variables.$barlow;
+                font-family: variables.$text;
                 font-size: 18px;
                 font-weight: 600;
                 line-height: 25px;
@@ -377,17 +377,19 @@ footer{
             .section--img{
                 height: 600px;
                 order: 2;
+                background-image: url(../../images/desktop/image-transform.jpg);
             }
         }
         .audience{
             .section--img{
                 height: 600px;
+                background-image: url(../../images/desktop/image-stand-out.jpg);
             }
         }
         .section--text{
             margin: auto;
         } 
-
+        
         // GRAPHIC DESIGN & PHOTOGRAPHY
         .graphic{
             float: left;
@@ -454,3 +456,45 @@ footer{
     }
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ BONUS - OPEN NAV ~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width:575px) {
+    .nav__menu{
+        //display: flex !important; //uncomment fort view
+        position: absolute;
+        background-color: variables.$white;
+        height: 329px;
+        width: 329px;
+        top: 100px;
+        left: 50%;
+        margin-left: -164.5px;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        li{
+            margin: 16px 0;
+            a{
+                color: variables.$text-p;
+                font-size: 20px;
+                font-family: variables.$text;
+                line-height: 25px;
+                letter-spacing: -0.14px;
+            }
+        }
+        li:last-child{
+            background-color: #FBD600;
+            height: 56px;
+            width: 140px;
+            border-radius: 28px;
+            text-align: center;
+            line-height: 56px;
+            a{
+                font-family: variables.$titles;
+                color: variables.$text-h;
+            }
+        }
+    }
+    
+}

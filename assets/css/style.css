@@ -409,7 +409,7 @@ ul {
 
 /* --- HEADER --- */
 header {
-  background-image: url(/images/mobile/image-header.jpg);
+  background-image: url(../../images/mobile/image-header.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -488,7 +488,7 @@ main article p {
   margin: 0 0 24px;
 }
 main article .brand__img {
-  background-image: url(../../../images/mobile/image-transform.jpg);
+  background-image: url(../../images/mobile/image-transform.jpg);
 }
 main article .audience__img {
   background-image: url(../../../images/mobile/image-stand-out.jpg);
@@ -741,9 +741,11 @@ footer .footer__links {
   main .brand .section--img {
     height: 600px;
     order: 2;
+    background-image: url(../../images/desktop/image-transform.jpg);
   }
   main .audience .section--img {
     height: 600px;
+    background-image: url(../../images/desktop/image-stand-out.jpg);
   }
   main .section--text {
     margin: auto;
@@ -801,5 +803,44 @@ footer .footer__links {
   }
   main .square .square__section {
     height: 450px;
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ BONUS - OPEN NAV ~~~~~~~~~~~~~~~~~~~~~~~~ */
+@media screen and (max-width: 575px) {
+  .nav__menu {
+    position: absolute;
+    background-color: #FFF;
+    height: 329px;
+    width: 329px;
+    top: 100px;
+    left: 50%;
+    margin-left: -164.5px;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  .nav__menu li {
+    margin: 16px 0;
+  }
+  .nav__menu li a {
+    color: #808397;
+    font-size: 20px;
+    font-family: "Barlow", sans-serif;
+    line-height: 25px;
+    letter-spacing: -0.14px;
+  }
+  .nav__menu li:last-child {
+    background-color: #FBD600;
+    height: 56px;
+    width: 140px;
+    border-radius: 28px;
+    text-align: center;
+    line-height: 56px;
+  }
+  .nav__menu li:last-child a {
+    font-family: "Fraunces", serif;
+    color: #24303E;
   }
 }/*# sourceMappingURL=style.css.map */
