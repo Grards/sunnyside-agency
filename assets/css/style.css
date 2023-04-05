@@ -496,12 +496,45 @@ main article .audience__img {
 main article .section--text {
   padding: 50px 24px;
 }
+main article .section--text a {
+  position: relative;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: #24303E;
+  text-transform: uppercase;
+  z-index: 2;
+}
+main article .section--text .a--underline {
+  position: relative;
+  height: 10px;
+  position: relative;
+  margin: 0 auto;
+  top: -10px;
+  width: 137px;
+  border-radius: 28px;
+  z-index: 1;
+}
+main article .section--text .brand__information--underline {
+  background-color: rgba(250, 212, 0, 0.25);
+}
+main article .section--text .audience__information--underline {
+  background-color: rgba(254, 119, 102, 0.25);
+}
+main article .section--text #brand--button:hover .brand__information--underline {
+  background-color: rgb(250, 212, 0);
+  cursor: pointer;
+}
+main article .section--text #audience--button:hover .audience__information--underline {
+  background-color: rgb(254, 119, 102);
+  cursor: pointer;
+}
 main article .graphic__section, main article .photography__section {
   height: 600px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 main article .graphic__section {
@@ -625,6 +658,9 @@ footer section .footer__links__list .footer__links__list__link {
   letter-spacing: -0.13px;
   color: #458D7E;
 }
+footer section .footer__links__list :hover {
+  color: #FFF;
+}
 footer section .footer__social__list {
   display: flex;
   flex-direction: row;
@@ -635,6 +671,135 @@ footer section .footer__social__list {
 footer section .footer__social__list li {
   margin: 0 14px;
 }
+footer section .footer__social__list :hover a img {
+  filter: invert(99%) sepia(70%) saturate(97%) hue-rotate(199deg) brightness(200%) contrast(100%);
+}
 footer .footer__links {
   margin-bottom: 88px;
+}
+
+@media (min-width: 1400px) {
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  body header {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../../images/desktop/image-header.jpg);
+    height: 100%;
+    padding: 34px 40px;
+  }
+  body header nav .nav__menu {
+    width: 40%;
+    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body header nav .nav__menu li:last-child {
+    background-color: #FFF;
+    border-radius: 28px;
+    height: 56px;
+    width: 140px;
+    text-align: center;
+    cursor: pointer;
+  }
+  body header nav .nav__menu li:last-child a {
+    color: #24303E;
+    text-transform: uppercase;
+    line-height: 56px;
+  }
+  body header nav .nav__menu #nav__menu__button:hover {
+    background-color: #77CDF5;
+  }
+  body header nav .nav__menu #nav__menu__button:hover a {
+    color: #FFF;
+  }
+  body header nav .nav__hamburger {
+    display: none;
+  }
+  body header h1 {
+    font-size: 56px;
+    margin-top: 155px;
+  }
+  body header .header__arrow-down {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+  }
+  main .brand, main .audience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-content: center;
+  }
+  main .brand .section--img {
+    height: 600px;
+    order: 2;
+  }
+  main .audience .section--img {
+    height: 600px;
+  }
+  main .section--text {
+    margin: auto;
+  }
+  main .graphic {
+    float: left;
+    width: 50%;
+  }
+  main .graphic .graphic__section {
+    background-image: url(../../images/desktop/image-graphic-design.jpg);
+  }
+  main .photography .photography__section {
+    background-image: url(../../images/desktop/image-photography.jpg);
+  }
+  main .graphic .section--img, main .photography .section--img {
+    height: 600px;
+  }
+  main .graphic p, main .photography p {
+    width: 50%;
+  }
+  main .testimonials {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    padding: 100px;
+  }
+  main .testimonials h3 {
+    grid-row: span 1;
+    grid-column: 2;
+    text-align: center;
+  }
+  main .testimonials section {
+    grid-row-start: 2;
+  }
+  main .square {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  main .square #orange {
+    background-image: url(../../images/desktop/image-gallery-orange.jpg);
+    grid-column: 2;
+  }
+  main .square #cone {
+    background-image: url(../../images/desktop/image-gallery-cone.jpg);
+    grid-column: 3;
+  }
+  main .square #milk {
+    background-image: url(../../images/desktop/image-gallery-milkbottles.jpg);
+    grid-column: 1;
+  }
+  main .square #sugar {
+    background-image: url(../../images/desktop/image-gallery-sugarcubes.jpg);
+    grid-column: 4;
+  }
+  main .square .square__section {
+    height: 450px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -43,3 +43,9 @@
         @content;
     }
  }
+
+@mixin rwd($screen) {
+   @media (min-width: #{$screen}px) {
+       @content;
+   }
+}
