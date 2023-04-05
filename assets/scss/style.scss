@@ -1,4 +1,4 @@
-@use "../../node_modules/normalize.scss/normalize.scss";
+@use "./normalize.scss";
 @use "../scss/partials/variables";
 @use "../scss/partials/mixins";
 
@@ -210,11 +210,54 @@ main{
         }
     }
     .square{
-        @include mixins.flex(row,wrap,start,start);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        section{
+            height: 188px;
+            width: auto;
+            @include mixins.background-cover;
+        }
     }
 }
 
 /* --- FOOTER --- */
 footer{
+    text-align: center;
     background-color: variables.$foot-background;
+    padding: 64px 24px;
+    overflow: hidden;
+    .footer__title{
+        filter: invert(26%) sepia(9%) saturate(2406%) hue-rotate(116deg) brightness(50%) contrast(90%);
+        scale:1.4;
+        margin-bottom: 40px;
+    }
+    section {
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        .footer__links__list{
+            @include mixins.flex(row,nowrap,center,center);
+            margin: 0 28.5px;
+            .footer__links__list__link{
+                font-family: variables.$barlow;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 25px;
+                letter-spacing: -0.13px;
+                color: variables.$foot-a;
+            }
+        }
+        .footer__social__list{
+            @include mixins.flex(row,nowrap,center,center);
+            li{
+                margin: 0 14px;
+            }
+        }
+    }
+    .footer__links{
+        margin-bottom: 88px;
+    }
+
 }
